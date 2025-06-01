@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Times:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Merriweather', Georgia, serif;
+  }
+
+  body {
+    @apply antialiased text-base text-gray-800 dark:text-gray-200 leading-relaxed;
+  }
+
+  /* KaTeX specific styles */
+  .katex {
+    font-size: 1.1em;
+    font-family: 'Merriweather', Georgia, serif !important;
+  }
+
+  .katex-display {
+    font-size: 1.1em;
+  }
+
+  .katex-html {
+    font-family: 'Merriweather', Georgia, serif !important;
+  }
+
+  /* List styles */
+  ul, ol {
+    @apply font-['Merriweather'] text-base leading-relaxed mb-4;
+  }
+
+  li {
+    @apply font-['Merriweather'] text-base leading-relaxed mb-2;
+  }
+
+  ul li::before {
+    @apply font-['Merriweather'];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 dark:text-white font-bold tracking-normal;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-3xl mb-6;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl mb-4;
+  }
+
+  p {
+    @apply text-base leading-relaxed mb-4;
+  }
+}
+
+@layer components {
+  .container-width {
+    @apply max-w-4xl mx-auto px-8 sm:px-12 lg:px-16;
+  }
+
+  .section {
+    @apply py-6 sm:py-8;
+  }
+
+  .card {
+    @apply 
+    transition-all duration-200;
+  }
+
+  .blog-title {
+    @apply font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-2;
+  }
+
+  .blog-description {
+    @apply text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-3;
+  }
+
+  .blog-date {
+    @apply text-sm text-gray-600 dark:text-gray-400 font-normal;
+  }
+
+  /* Academic styling ONLY for individual blog posts */
+  .blog-post-academic {
+    font-family: 'Times', 'Times New Roman', Georgia, serif;
+    max-width: 50rem; /* Academic width */
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .blog-post-academic .katex {
+    font-family: 'Times', 'Times New Roman', Georgia, serif !important;
+  }
+
+  .blog-post-academic .katex-html {
+    font-family: 'Times', 'Times New Roman', Georgia, serif !important;
+  }
+
+  .blog-post-academic h1,
+  .blog-post-academic h2,
+  .blog-post-academic h3,
+  .blog-post-academic h4,
+  .blog-post-academic h5,
+  .blog-post-academic h6 {
+    font-family: 'Times', 'Times New Roman', Georgia, serif;
+    line-height: 1.4;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-post-academic h1:first-child,
+  .blog-post-academic h2:first-child,
+  .blog-post-academic h3:first-child {
+    margin-top: 0;
+  }
+
+  .blog-post-academic h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-post-academic p {
+    font-family: 'Times', 'Times New Roman', Georgia, serif;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    text-indent: 0;
+  }
+
+  .blog-post-academic h1 + p,
+  .blog-post-academic h2 + p,
+  .blog-post-academic h3 + p,
+  .blog-post-academic h4 + p,
+  .blog-post-academic h5 + p,
+  .blog-post-academic h6 + p {
+    text-indent: 0;
+  }
+
+  .blog-post-academic ul,
+  .blog-post-academic ol {
+    font-family: 'Times', 'Times New Roman', Georgia, serif;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-post-academic li {
+    font-family: 'Times', 'Times New Roman', Georgia, serif;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-post-academic blockquote {
+    border-left: 4px solid #D1D5DB;
+    padding-left: 1.5rem;
+    margin: 2rem 1rem;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .blog-post-academic .dark blockquote {
+    border-left-color: #4B5563;
+  }
+
+  /* Academic content styling for the prose wrapper */
+  .blog-post-academic .prose {
+    font-family: 'Times', 'Times New Roman', Georgia, serif;
+    line-height: 1.7;
+    text-align: justify;
+    max-width: none;
+  }
+
+  .blog-post-academic .prose p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  .blog-post-academic .prose h1,
+  .blog-post-academic .prose h2,
+  .blog-post-academic .prose h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .blog-post-academic .prose h1:first-child,
+  .blog-post-academic .prose h2:first-child,
+  .blog-post-academic .prose h3:first-child {
+    margin-top: 0;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+} 
