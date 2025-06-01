@@ -234,7 +234,7 @@ const post: BlogPost = {
       This is because it makes locally optimal decisions at each step without considering the global picture. The workaround is to run the algorithm with different initialisations and take the best result. However, of course this isn't a very efficient workaround.
       </p>
 
-      <h2>Applications</h2>
+      <h3>Applications</h3>
       <p>
         There are many applications of clusterwise linear regression, and it is useful in finding segments of data that have different linear relationships.
         Of course, it is not limited to linear relationships, and can be used to find segments of data that have different non-linear relationships.
@@ -245,12 +245,6 @@ const post: BlogPost = {
         clusterwise linear regression simultaneously clusters the data and fits separate 
         linear models to each cluster, uncovering heterogeneous patterns that would be 
         missed by a single linear regression model.
-      </p>
-
-      <p>
-        The beauty of regression lies in its interpretability. It provides clear insights into 
-        how each feature influences the target variable, allowing us to quantify these relationships 
-        and make more informed decisions.
       </p>
 
       <h2>Closing remarks</h2>
