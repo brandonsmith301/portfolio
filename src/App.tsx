@@ -38,13 +38,11 @@ const App = () => {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
-    // Reset footer visibility on route change
     setShowFooter(false);
     
-    // Delay footer rendering
     const timer = setTimeout(() => {
       setShowFooter(true);
-    }, 1000); // Adjust timing as needed
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);

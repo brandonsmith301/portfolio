@@ -83,10 +83,9 @@
     @apply text-sm text-gray-600 dark:text-gray-400 font-normal;
   }
 
-  /* Academic styling ONLY for individual blog posts */
   .blog-post-academic {
     font-family: 'Times', 'Times New Roman', Georgia, serif;
-    max-width: 50rem; /* Academic width */
+    max-width: 50rem; 
     margin: 0 auto;
     padding: 0 3rem;
   }
@@ -163,7 +162,6 @@
     border-left-color: #4B5563;
   }
 
-  /* Academic content styling for the prose wrapper */
   .blog-post-academic .prose {
     font-family: 'Times', 'Times New Roman', Georgia, serif;
     line-height: 1.7;

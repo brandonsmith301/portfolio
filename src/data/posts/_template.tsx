@@ -1,27 +1,26 @@
 import { BlogPost } from '../../types/blog';
 
 const post: BlogPost = {
-  slug: 'your-post-slug', // URL-friendly identifier (lowercase, hyphens)
+  slug: 'your-post-slug',
   title: 'Your Blog Post Title',
   description: 'A brief description of your post for the blog index',
-  date: '2024-12-08', // ISO date format (YYYY-MM-DD)
-  readingTime: 5, // Estimated reading time in minutes
-  tags: ['Tag1', 'Tag2', 'Tag3'], // Relevant tags
+  date: '2024-12-08',
+  readingTime: 5,
+  tags: ['Tag1', 'Tag2', 'Tag3'],
   content: (
     <>
       <p>
-        Your introduction paragraph goes here. This is where you introduce the topic 
-        and give readers a reason to continue reading.
+        Your introduction paragraph goes here.
       </p>
 
       <h2>Main Section Title</h2>
       <p>
-        Content for your main section. You can include multiple paragraphs here.
+        Content for your main section.
       </p>
 
       <h3>Subsection Title</h3>
       <p>
-        Content for subsections. Use h3 for subsections under h2.
+        Content for subsections.
       </p>
 
       {/* Code blocks */}
@@ -52,8 +51,7 @@ console.log(example);`}</code>
 
       <h2>Conclusion</h2>
       <p>
-        Wrap up your post with a conclusion that summarizes the key points 
-        and leaves readers with something to think about.
+        Wrap up your post with a conclusion.
       </p>
     </>
   )

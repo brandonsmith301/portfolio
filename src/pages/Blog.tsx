@@ -8,7 +8,7 @@ interface BlogItem {
   title: string;
   description?: string;
   link: string;
-  date: string; // ISO date string
+  date: string; 
   isInternal: boolean;
   tags?: string[];
   readingTime?: number;
@@ -17,12 +17,9 @@ interface BlogItem {
 const Blog = () => {
   usePageTitle('Blog');
   
-  // External blog items (if you still want to keep some external links)
   const externalBlogList: BlogItem[] = [
-    // You can add external blog links here if needed
   ];
 
-  // Combine internal and external posts
   const allPosts = [
     ...blogPosts.map(post => ({
       title: post.title,
@@ -36,7 +33,6 @@ const Blog = () => {
     ...externalBlogList
   ];
 
-  // Sort all posts by date in descending order (newest first)
   const sortedBlogList = allPosts.sort((a, b) => 
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
