@@ -105,11 +105,6 @@ const assignToClusters = (data: { x: number; y: number; cluster: number }[], reg
   return newData;
 };
 
-const distanceToLine = (point: { x: number; y: number }, slope: number, intercept: number) => {
-  const prediction = slope * point.x + intercept;
-  return Math.abs(prediction - point.y);
-};
-
 export const ClusterwiseRegressionVis = ({
   nClusters: initialClusters = 3,
   nPointsPerCluster: initialPoints = 20,
